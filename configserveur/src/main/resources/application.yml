@@ -1,0 +1,27 @@
+server:
+  port: 8082
+spring:
+  rabbitmq:
+    password: "guest"
+    username: "guest"
+    host: "localhost"
+    port: 5672
+  application:
+    name: "serveurConfig"
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          username: "hamdane1548"
+          uri: "https://github.com/hamdane1548/ecommerce-config.git"
+          force-pull: true
+          default-label: master
+          timeout: 5
+          clone-on-start: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
