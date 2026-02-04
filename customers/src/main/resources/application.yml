@@ -11,3 +11,8 @@ spring:
     show-sql: true
   profiles:
     active: "default"
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"

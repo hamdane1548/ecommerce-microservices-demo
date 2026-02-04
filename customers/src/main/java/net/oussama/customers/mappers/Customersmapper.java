@@ -5,7 +5,7 @@ import net.oussama.customers.entity.Customers;
 import org.springframework.beans.BeanUtils;
 
 public class Customersmapper {
-    private static Customers toCustomers(CustomersDto customersDto){
+    public static Customers toCustomers(CustomersDto customersDto){
          Customers customers = new Customers();
          BeanUtils.copyProperties(customersDto, customers);
          return customers;

@@ -48,7 +48,7 @@ public class GlobalExceptionEandler extends ResponseEntityExceptionHandler {
         ErrorDto errorDto=new ErrorDto(
                 customerAleradyExists.getMessage(),
                 HttpStatus.BAD_REQUEST,
-                webRequest.getContextPath(),
+                webRequest.getDescription(false),
                 LocalDateTime.now()
         );
         return new ResponseEntity<>(errorDto,HttpStatus.BAD_REQUEST);
