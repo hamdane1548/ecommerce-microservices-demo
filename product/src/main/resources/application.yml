@@ -1,0 +1,18 @@
+server:
+  port: 8083
+spring:
+  config:
+    import: configserver:http://localhost:8082/
+  application:
+    name: "product"
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  profiles:
+    active: "default"
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"
