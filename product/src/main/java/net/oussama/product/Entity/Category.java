@@ -10,7 +10,6 @@ import java.util.List;
 
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter
-
 public class Category extends BaseEntity{
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private  String categoryId;
