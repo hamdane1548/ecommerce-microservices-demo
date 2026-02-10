@@ -48,6 +48,17 @@ public class GlobalExeption extends ResponseEntityExceptionHandler {
                 )
         );
     }
+    @ExceptionHandler(CategoryAleradyexist.class)
+    public ResponseEntity<ErrotDto> categoryAlreadyExist(CategoryAleradyexist categoryAleradyexist, WebRequest webRequest) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+                new ErrotDto(
+                        categoryAleradyexist.getMessage(),
+                        HttpStatus.BAD_REQUEST,
+                        webRequest.getDescription(false),
+                        LocalDateTime.now()
+                )
+        );
+    }
     @Override
     public ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request){
          List<ObjectError> error = ex.getBindingResult().getAllErrors();

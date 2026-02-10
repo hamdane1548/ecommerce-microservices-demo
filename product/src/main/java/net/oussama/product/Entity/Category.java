@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter
 public class Category extends BaseEntity{
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private  String categoryId;
+    private  Long categoryId;
     private  String categoryName;
     private  String categoryDescription;
     @OneToMany(mappedBy = "category",fetch = FetchType.LAZY)

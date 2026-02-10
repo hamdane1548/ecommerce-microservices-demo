@@ -19,7 +19,7 @@ public class ServicesProductImpl implements ServicesProduct {
     private CategoryRepositroy   categoryRepositroy;
     @Override
     public void createProduct(ProductDto product) {
-        Optional<Category> category = categoryRepositroy.findById(Long.valueOf(product.getCategory_id()));
+        Optional<Category> category = categoryRepositroy.findById(product.getCategory_id());
         if(category.isEmpty()) {
             throw new CategoryNotfound("Category not found");
         }
