@@ -3,6 +3,7 @@ package net.oussama.product.Controlleur;
 import lombok.AllArgsConstructor;
 import net.oussama.product.DTO.CategoryDto;
 import net.oussama.product.DTO.ResponseDto;
+import net.oussama.product.Entity.Category;
 import net.oussama.product.Services.Impl.CategoryDtoImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,8 +27,8 @@ public class CategoryControlleur {
         );
     }
     @GetMapping("/fetch")
-    public ResponseEntity<List<CategoryDto>> Allcategory(){
-        List<CategoryDto> categoryDtos = categoryServices.Allgategory();
+    public ResponseEntity<List<Category>> Allcategory(){
+        List<Category> categoryDtos = categoryServices.Allgategory();
         return ResponseEntity.ok().body(categoryDtos);
     }
 

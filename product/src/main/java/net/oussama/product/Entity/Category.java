@@ -16,6 +16,6 @@ public class Category extends BaseEntity{
     private  Long categoryId;
     private  String categoryName;
     private  String categoryDescription;
-    @OneToMany(mappedBy = "category",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "category",fetch = FetchType.EAGER)
     private List<Product> products;
 }

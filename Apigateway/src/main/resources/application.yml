@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: "ApiGateway"
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      access: unrestricted
+server:
+  port: 8180
+info:
+  name : "api gateway services "
+  description: "devloppement de api gateway services"
+  version : "1.0"
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8181/eureka/
+  instance:
+    prefer-ip-address: true

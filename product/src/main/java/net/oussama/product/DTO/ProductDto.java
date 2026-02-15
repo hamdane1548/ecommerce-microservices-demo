@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.oussama.product.Entity.Category;
 
+import java.util.Optional;
+
 @Data @AllArgsConstructor
 @NoArgsConstructor
 public class ProductDto {
@@ -16,4 +18,5 @@ public class ProductDto {
     private String price;
     private Integer quantity;
     private Long category_id;
+    Optional<Category> category;
 }

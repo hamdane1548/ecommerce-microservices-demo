@@ -28,7 +28,7 @@ public class CategoryDtoImpl implements CategoryServices{
         }
     }
     @Override
-    public List<CategoryDto> Allgategory() {
+    public List<Category> Allgategory() {
         List<Category> category = categoryRepositroy.findAll();
         List<CategoryDto> categoryDtos = new ArrayList<>();
         category.forEach(
@@ -37,7 +37,7 @@ public class CategoryDtoImpl implements CategoryServices{
                    categoryDtos.add(categoryRepository);
                 }
         );
-        return categoryDtos;
+        return category;
     }
 
 }

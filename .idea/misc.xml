@@ -9,6 +9,9 @@
         <option value="$PROJECT_DIR$/configserveur/pom.xml" />
         <option value="$PROJECT_DIR$/customers/pom.xml" />
         <option value="$PROJECT_DIR$/product/pom.xml" />
+        <option value="$PROJECT_DIR$/configserveur/Eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/Apigateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

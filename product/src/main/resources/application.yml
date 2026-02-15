@@ -11,8 +11,23 @@ spring:
       ddl-auto: create
   profiles:
     active: "default"
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8181/eureka/
+  instance:
+    prefer-ip-address: true
+info:
+  name: "product"
+  description: "product services pour la gestion de product and categroy"
+  version : 1.0
 management:
-  endpoint:
+  endpoints:
     web:
       exposure:
         include: "*"
+  info:
+    env:
+      enabled: true
